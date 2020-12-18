@@ -266,7 +266,9 @@ __acquires(hb->chain_lock)
 
 static inline void fq_unlink(struct inet_frag_queue *fq, struct inet_frags *f)
 {
+
 	struct inet_frag_bucket *hb;
+
 
 	hb = get_frag_bucket_locked(fq, f);
 	hlist_del(&fq->list);
